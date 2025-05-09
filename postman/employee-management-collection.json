@@ -1,0 +1,121 @@
+{
+    "info": {
+        "name": "Employee Management API",
+        "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+        "description": "Postman collection to test the Employee Management REST API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get All Employees",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/employees",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "employees"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Employee by ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/employees/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "employees",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Create New Employee",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"firstName\": \"Alice\",\n    \"lastName\": \"Johnson\",\n    \"emailAddress\": \"alice.1746662605.493767@carefirst.com\",\n    \"phone\": \"202-555-0111\",\n    \"birthDate\": \"1985-03-12\",\n    \"jobTitle\": \"Software Engineer\",\n    \"department\": \"IT\",\n    \"location\": \"Baltimore\",\n    \"startDate\": \"2020-01-15\",\n    \"manager\": \"Bob Smith\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/employees",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "employees"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Employee by ID",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"firstName\": \"AliceUpdated\",\n    \"lastName\": \"JohnsonUpdated\",\n    \"emailAddress\": \"alice.updated.1746662605.493825@carefirst.com\",\n    \"phone\": \"202-555-0999\",\n    \"birthDate\": \"1985-03-12\",\n    \"jobTitle\": \"Senior Engineer\",\n    \"department\": \"R&D\",\n    \"location\": \"Remote\",\n    \"startDate\": \"2021-01-01\",\n    \"manager\": \"Carol Davis\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/employees/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "employees",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete Employee by ID",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/employees/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "employees",
+                        "1"
+                    ]
+                }
+            }
+        }
+    ]
+}

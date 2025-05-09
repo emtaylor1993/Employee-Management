@@ -1,0 +1,11 @@
+services:
+    employee-management:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: employee-management
+        ports:
+            - "8080:8080"
+        environment:
+            SPRING_PROFILES_ACTIVE: default
+        restart: always
